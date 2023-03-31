@@ -16,3 +16,9 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+    def is_url_respond(self, standard):
+        current_url = self.browser.current_url()
+        if standard in current_url:
+            return True
+        return False
